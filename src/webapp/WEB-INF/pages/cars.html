@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car list</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: auto;
+      }
+      th,td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+      th{
+        background-color: #e51414;
+      }
+    </style>
+</head>
+<body>
+<h2 style="text-align: center;">Список машин</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Марка</th>
+    <th>Модель</th>
+    <th>Год</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="car : ${cars}">
+  <td th:text="${car.carName}"></td>
+  <td th:text="${car.carModel}"></td>
+  <td th:text="${car.carYear}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
